@@ -20,7 +20,7 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
 
 function validateInput(testInput) {
     let numInput = Number(testInput);
-    if (numInput === '') {
+    if (testInput === '') {
         return "Empty"
     } else if (isNaN(numInput)) {
         return "Not a Number"
