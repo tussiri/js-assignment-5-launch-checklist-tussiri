@@ -14,9 +14,11 @@ window.addEventListener("load", function () {
         addDestinationInfo(document, selectedPlanet.name, selectedPlanet.diameter, selectedPlanet.star, selectedPlanet.distance, selectedPlanet.moons, selectedPlanet.image)
         // Below this comment call the appropriate helper functions to pick a planet fom the list of planets and add that information to your destination.
     })
+
     let list = document.getElementById('faultyItems');
     list.style.visibilty = "hidden";
     let form = document.querySelector('form');
+
     form.addEventListener("submit", function (event) {
         event.preventDefault();
         let pilotInput = document.querySelector("input[name=pilotName]");
