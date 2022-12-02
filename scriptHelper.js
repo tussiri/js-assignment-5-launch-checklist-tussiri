@@ -22,7 +22,7 @@ function validateInput(testInput) {
     let numInput = Number(testInput);
     if (numInput === '') {
         return "Empty"
-    } else if (numInput === isNaN(numInput)) {
+    } else if (isNaN(numInput)) {
         return "Not a Number"
     } else if (isNaN(numInput) === false) {
         return "Is a Number"
