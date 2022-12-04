@@ -44,8 +44,10 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
         alert("input for the copilot cannot be a number.");
     } else if (validateInput(fuelLevel) === "Not a Number") {
         alert("input for the fuel level must be a number.");
-    } else if (validateInput(cargoMass) === "Not a Number") {
-        alert("input for the cargo mass must be a number.");
+        // }
+        // else if (validateInput(cargoMass) === "Not a Number") {
+        //     alert("input for the cargo mass must be a number.");
+        // } 
     } else {
         list.style.visibility = "visible";
         pilotStatus.innerHTML = `Pilot ${pilot} is ready for launch`;
