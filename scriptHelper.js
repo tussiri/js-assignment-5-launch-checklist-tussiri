@@ -49,7 +49,6 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
         //     alert("input for the cargo mass must be a number.");
         // } 
     } else {
-        list.style.visibility = "visible";
         pilotStatus.innerHTML = `Pilot ${pilot} is ready for launch`;
         copilotStatus.innerHTML = `Co-pilot ${copilot} is ready for launch`;
         let launchStatus = document.getElementById("launchStatus");
