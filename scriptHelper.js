@@ -35,21 +35,16 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     let fuel = document.getElementById("fuelStatus");
     let copilotStatus = document.getElementById('copilotStatus');
     let cargoStatus = document.getElementById('cargoStatus');
+    let status = document.getElementById('launchStatus');
 
     if (validateInput(pilot) === "Empty" || validateInput(fuelLevel) === "Empty" || validateInput(copilot) === "Empty" || validateInput(cargoLevel) === "Empty") {
         alert(`All fields are required!`);
-        list.style.visibility = "hidden";
-    } else if (validateInput(pilot) === "Is a Number") {
-        alert("input for the pilot cannot be a number.");
-    } else if (validateInput(copilot) === "Is a Number") {
-        alert("input for the copilot cannot be a number.");
-    } else if (validateInput(fuelLevel) === "Not a Number") {
+//         list.style.visibility = "hidden";
+    } else if (validateInput(pilot) === "Is a Number" || validateInput(copilot)==="Is a Number") {
+        alert("Name cannot contain a number.");
+    } else if (validateInput(fuelLevel) === "Not a Number" || validateInput(cargoLevel)==="Not a Number" {
         alert("input for the fuel level must be a number.");
-        }
-        else if (validateInput(cargoLevel) === "Not a Number") {
-            alert("input for the cargo mass must be a number.");
     } else {
-        list.style.visibility = "visible";
         pilotStatus.innerHTML = `Pilot ${pilot} is ready for launch`;
         copilotStatus.innerHTML = `Co-pilot ${copilot} is ready for launch`;
         let launchStatus = document.getElementById("launchStatus");
@@ -71,7 +66,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
             cargoStatus.innerHTML = 'Cargo mass too heavy for launch';
             launchStatus.innerHTML = 'Shuttle Not Ready for Launch';
             launchStatus.style.color = "#c7254e";
-        } else if {
+        } else if (fuelLevel>10000 && cargoLevel<10000{
             list.style.visibility = "visible";
             fuel.innerHTML = "Fuel level high enough for launch";
             cargoStatus.innerHTML = 'Cargo mass low enough for launch';
@@ -86,9 +81,6 @@ async function myFetch() {
     let planetsReturned;
 
     planetsReturned = await fetch("https://handlers.education.launchcode.org/static/planets.json").then(function (response) {
-        if (response.status >= 400) {
-            throw new Error('Bad response');
-        } else {
             return response.json();
         }
 
