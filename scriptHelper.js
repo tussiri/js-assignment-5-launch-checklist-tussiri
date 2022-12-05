@@ -42,7 +42,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
 //         list.style.visibility = "hidden";
     } else if (validateInput(pilot) === "Is a Number" || validateInput(copilot)==="Is a Number") {
         alert("Name cannot contain a number.");
-    } else if (validateInput(fuelLevel) === "Not a Number" || validateInput(cargoLevel)==="Not a Number" {
+    } else if (validateInput(fuelLevel) === "Not a Number" || validateInput(cargoLevel)==="Not a Number") {
         alert("input for the fuel level must be a number.");
     } else {
         pilotStatus.innerHTML = `Pilot ${pilot} is ready for launch`;
