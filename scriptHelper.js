@@ -32,7 +32,7 @@ function validateInput(testInput) {
 
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     let pilotStatus = document.getElementById("pilotStatus");
-    let fuel = document.getElementById("fuelStatus");
+    let fuelStatus = document.getElementById("fuelStatus");
     let copilotStatus = document.getElementById('copilotStatus');
     let cargoStatus = document.getElementById('cargoStatus');
     let launchStatus = document.getElementById("launchStatus");
@@ -65,6 +65,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
         cargoStatus.innerHTML = 'Cargo mass low enough for launch';
         launchStatus.innerHTML = 'Shuttle is Ready for Launch';
         launchStatus.style.color = "#419F6A";
+
     }
 }
 
