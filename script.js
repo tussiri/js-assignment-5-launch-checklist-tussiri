@@ -11,15 +11,17 @@ window.addEventListener("load", function () {
         console.log(listedPlanets);
     }).then(function () {
         console.log(listedPlanets);
+        
         let selectedPlanet = pickPlanet(listedPlanets);
         addDestinationInfo(document, selectedPlanet.name, selectedPlanet.diameter, selectedPlanet.star, selectedPlanet.distance, selectedPlanet.moons, selectedPlanet.image)
         // Below this comment call the appropriate helper functions to pick a planet fom the list of planets and add that information to your destination.
-    })
-    let form = document.querySelector('form');
+    });
+    
     let list = document.getElementById('faultyItems');
+    let form = document.querySelector('form');
+    
     list.style.visibilty = "hidden";
-
-
+    
     form.addEventListener("submit", function (event) {
         event.preventDefault();
         let pilotInput = document.querySelector("input[name=pilotName]");
@@ -29,11 +31,11 @@ window.addEventListener("load", function () {
         let copilot = copilotInput.value;
 
         let fuelInput = document.querySelector("input[name=fuelLevel]");
-        let fuelLevel = fuelInput.value;
+        let fuelValue = (fuelInput.value);
 
-        let cargoInput = document.querySelector("input[name=CargoMass]");
-        let cargoLevel = cargoInput.value;
-
+        let cargoInput = document.querySelector("input[name=cargoMass]");
+        let cargoValue = (cargoInput.value);
+        
         formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel);
     });
 });
