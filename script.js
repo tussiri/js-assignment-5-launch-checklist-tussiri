@@ -1,6 +1,7 @@
 
 window.addEventListener("load", function () {
 
+    list.style.visibility = "hidden";
     let listedPlanets;
     // Set listedPlanetsResponse equal to the value returned by calling myFetch()
     let listedPlanetsResponse = myFetch();
@@ -14,9 +15,9 @@ window.addEventListener("load", function () {
         addDestinationInfo(document, selectedPlanet.name, selectedPlanet.diameter, selectedPlanet.star, selectedPlanet.distance, selectedPlanet.moons, selectedPlanet.image)
         // Below this comment call the appropriate helper functions to pick a planet fom the list of planets and add that information to your destination.
     })
-    list.style.visibilty = "hidden";
     let form = document.querySelector('form');
     let list = document.getElementById('faultyItems');
+    list.style.visibilty = "hidden";
 
 
     form.addEventListener("submit", function (event) {
